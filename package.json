@@ -6,11 +6,12 @@
   "author": "lemondouble <lemondouble2@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node index.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
+    "@aws-sdk/client-lambda": "^3.296.0",
+    "@slack/bolt": "^3.12.2",
     "dotenv": "^16.0.3",
     "openai": "^3.2.1"
   },

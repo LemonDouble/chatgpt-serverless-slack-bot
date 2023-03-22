@@ -1,0 +1,36 @@
+service: chatgpt-serverless-slack-bot
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-northeast-1
+  stage: dev
+  architecture: arm64 # ARM이 x86보다 조금이라도 싸서..
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "lambda:InvokeFunction"
+      Resource: '*'
+  environment:
+    STAGE: ${self:provider.stage}
+
+plugin:
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin
+
+functions:
+  proxy:
+    handler: src/proxy/handler.handle
+    events:
+      - httpApi:
+          path: /slack/events
+          method: post
+  openai-response:
+    handler: src/openai-response/handler.handle
+    timeout: 30 # OpenAI Response가 느린 경우도 있으므로 넉넉하게 설정
+
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin

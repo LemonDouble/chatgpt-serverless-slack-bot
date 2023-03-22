@@ -10,5 +10,9 @@ module.exports = {
     sourceType: "module",
     project: ["./tsconfig.json"],
   },
-  rules: {},
+  rules: {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+  },
 };
