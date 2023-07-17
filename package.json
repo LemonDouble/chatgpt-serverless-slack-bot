@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
-    "@aws-sdk/client-lambda": "^3.363.0",
+    "@aws-sdk/client-lambda": "^3.370.0",
     "@slack/bolt": "^3.13.2",
     "dotenv": "^16.3.1",
     "openai": "^3.3.0"
