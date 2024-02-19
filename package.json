@@ -12,7 +12,7 @@
   "dependencies": {
     "@aws-sdk/client-lambda": "^3.516.0",
     "@slack/bolt": "^3.17.1",
-    "dotenv": "^16.4.2",
+    "dotenv": "^16.4.4",
     "openai": "^4.28.0"
   },
   "devDependencies": {
