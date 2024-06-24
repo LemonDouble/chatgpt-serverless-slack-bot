@@ -13,7 +13,7 @@
     "@aws-sdk/client-lambda": "^3.600.0",
     "@slack/bolt": "^3.19.0",
     "dotenv": "^16.4.5",
-    "openai": "^4.51.0"
+    "openai": "^4.52.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.140",
